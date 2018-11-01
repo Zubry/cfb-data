@@ -8,3 +8,11 @@ services:
       context: .
     volumes:
      - ./app:/home/app/
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+     - ./app:/home/app/
+    volumes:
+     - ./api:/home/api/
