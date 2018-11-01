@@ -9,3 +9,5 @@ RUN chown -R api:api $HOME/*
 
 USER api
 WORKDIR $HOME/
+
+EXPOSE 3000

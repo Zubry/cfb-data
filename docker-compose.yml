@@ -9,10 +9,15 @@ services:
     volumes:
      - ./app:/home/app/
   api:
+    tty: true
+    ports:
+     - "3000:3000"
     build:
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-api
       context: .
     volumes:
      - ./app:/home/app/
-    volumes:
      - ./api:/home/api/
+    entrypoint:
+      - node
+      - ../api

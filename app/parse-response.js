@@ -33,8 +33,10 @@ function processWeek(week) {
           neutral: game.isNeutralSite,
           id: game.id,
           date: game.utcDate,
+          season: game.season,
+          week: game.week,
         }
       }
     })
-    .map(line => (console.log(line), line))
+    .map(line => (console.log(JSON.stringify(line)), line))
 }
