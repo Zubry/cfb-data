@@ -24,3 +24,11 @@ The first script prints out the results of a game, given a week and year. You wi
 ```bash
 echo "jE7yBJVRNAwdDesMgTzTXUUSx1It41Fq" | bash ./fetch-api 7 2018
 ```
+
+# Processing the data
+
+You can pipe the above into the Node processor, which takes each line of JSON and applies a function to it.
+
+```bash
+echo "jE7yBJVRNAwdDesMgTzTXUUSx1It41Fq" | bash ./fetch-api 7 2018 | node parse-response
+```
