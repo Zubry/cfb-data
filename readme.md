@@ -32,3 +32,7 @@ You can pipe the above into the Node processor, which takes each line of JSON an
 ```bash
 echo "jE7yBJVRNAwdDesMgTzTXUUSx1It41Fq" | bash ./fetch-api 7 2018 | node parse-response
 ```
+
+# ad-hoc Web API
+
+It's kind of obnoxious to run the command through the terminal each time, so there's a temporary API set up on port 3000 that runs it for you. This will eventually be replaced by something a little more robust that allows users to query the data and force updates, but for now just send a GET to localhost:3000 to run the shell script.
