@@ -1,2 +1,6 @@
 API_KEY=$(cat)
-curl "https://api.foxsports.com/sportsdata/v1/football/cfb/events.json?enable=odds%2Cteamdetails&season=${2}&seasontype=reg&week=${1}&apikey=$API_KEY"
+
+for CONFERENCE in 197 9 12 11 14 15 16 17 18 19 105; do
+  curl -s "https://api.foxsports.com/sportsdata/v1/football/cfb/events.json?group=${CONFERENCE}&enable=odds%2Cteamdetails&season=${2}&seasontype=reg&week=${1}&apikey=$API_KEY";
+  printf '\n';
+done
